@@ -1,0 +1,6 @@
+/*-- PC版CSS --*/
+@media screen and (min-width: 900px){
+      body{
+        display: none;
+      }
+}

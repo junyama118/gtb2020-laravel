@@ -1,0 +1,90 @@
+@media screen and (max-width: 900px) {
+    body{
+        display: block;
+        background-color:rgb(247, 234, 212);
+     }
+     .header{
+         padding: 5px;
+         background: rgb(255, 171, 92);
+     }
+
+     #menu-drawer{
+         position: relative;
+     }
+
+     .menu-unshown{
+         display: none;
+     }
+     /*アイコンの位置*/
+     #menu-open{
+         display: inline-block;
+         width: 30px;
+         height: 22px;
+         vertical-align: middle;
+     }
+
+     /*ハンバーガーアイコン*/
+     #menu-open span, #menu-open span:before, #menu-open span:after{
+         position: absolute;
+         bottom: 0;
+         right: 0;
+         top: 34;
+         height: 3px;
+         width: 25px;
+         border-radius: 3px;
+         background: #555;
+         display: block;
+         content: '';
+         cursor: pointer;
+     }
+
+     #menu-open span:before{
+         bottom: -8px;
+     }
+     #menu-open span:after{
+         bottom: -16px;
+     }
+
+     #menu-content{
+         overflow: auto;
+         position: relative;
+         top: 50;
+         left: 0;
+         z-index: 9999;
+         width: 90%;
+         max-width: 250px;
+         height: 30%;
+         background: #3FA492;
+         transition: .3s ease-in-out;
+         -webkit-transform: translateX(-105%);
+         transform: translateX(-105%);
+    }
+
+    #menu-input:checked ~ #menu-content{
+        -webkit-transform: translateX(0%);
+        transform: translateX(0%);
+        box-shadow: 6px 0 25px rgba(0, 0, 0, .15);
+    }
+
+    ul{
+        list-style: none;
+    }
+
+    a{
+        color: white;
+    }
+     
+     .timeline-container{
+         background: #ffffff;
+         max-width: 900px;
+     }
+     .user-search{
+         font-size: 16px;
+         width:200px;
+
+     }
+     .search-button{
+         font-size: 14px;
+     }
+     
+ }      
