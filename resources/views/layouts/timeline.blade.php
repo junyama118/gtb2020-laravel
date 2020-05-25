@@ -4,8 +4,8 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" media="(max-width: 900px)" href="mobile_timeline.css">
-        <link rel="srylesheet" media="(min-widtn: 900px)" href="pc_timeline.css">
+        <link rel="stylesheet" media="(max-width: 900px)" href="{{ asset('css/mobile_timeline.css') }}">
+        <link rel="srylesheet" media="(min-widtn: 900px)" href="{{ asset('css/pc_timeline.css') }}">
         <title>おごってタイムライン</title>
     </head>
 
