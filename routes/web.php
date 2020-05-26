@@ -55,3 +55,4 @@ Route::prefix('tester')->group(function () {
     Route::post('', 'TesterController@exec');
 });
 
+Route::get('/test_create', 'RegisterController@create');
