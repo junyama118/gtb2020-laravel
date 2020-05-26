@@ -16,6 +16,11 @@ class CommentController extends Controller
 
     public function store(\App\Http\Requests\Comments\Post $request)
     {
+        $comment = Comment::create([
+                'name' => $request->input('name'),
+                'content' => $request->input('content'),
+            ]);
+           return response()->json($comment, 201);
     }
 
     public function show($id)
