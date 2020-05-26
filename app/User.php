@@ -11,6 +11,15 @@ class User extends Model
         'name' ,
         'email' ,
         'password' ,
-        'URL' ,
     ];
+
+    protected $hidden = [
+        'password',
+        'remember_token',
+    ];
+
+    protected $casts = [
+        'email_verified_at' => 'datetime',
+    ];
+
 }
