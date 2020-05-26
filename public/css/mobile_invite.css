@@ -1,0 +1,16 @@
+@media screen and (max-width: 900px) {
+    
+    body {
+        display: block;
+        background-color:#F7AB19;
+    }
+
+    .header {
+        display:block;
+        background-color:#C28000;
+        height: 58px;
+        width:100%;
+        max-width: 900px;
+
+
+    }

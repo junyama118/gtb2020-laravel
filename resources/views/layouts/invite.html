@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" media="(max-width: 900px)" href="mobile_invite.css">
+        <link rel="srylesheet" media="(min-widtn: 900px)" href="pc_invite.css">
+        <title>招待します！</title>
+    </head>
+    <body>
+        <div class="header">
+            <button class="backbotton" type="button" onclick="history.back()">戻る</button>
+        
+        
+        </div>
+        
+        <div class="title">招待します！</div>
+        
+        <div class="main">
+            <p>招待URL</p>
+        </div>
+        
+        <div class="copyArea">
+            <input id="copy" type="text" size="15" value="http://www.ogottekudasai.work/invite" onfocus="this.select();" readonly>
+            <button onclick="copyToClipboard()">URLをコピー</button>
+        </div>
+
+        <div class="copyicon">
+        </div>
+
+        <script>
+            function copyToClipboard() {
+                var copyTarget = document.getElementById("copy");
+                copyTarget.select();
+                if(document.execCommand("Copy")){
+                    alert("コピーしました！ : " + copyTarget.value);
+                }else{
+                    alert('コピーできなかったよ〜')
+                }
+            }
+        </script>
+    </body>
+</html>
+<script>
