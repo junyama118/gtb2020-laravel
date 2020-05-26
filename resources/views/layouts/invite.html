@@ -32,11 +32,8 @@
             function copyToClipboard() {
                 var copyTarget = document.getElementById("copy");
                 copyTarget.select();
-                if(document.execCommand("Copy")){
+                document.execCommand("Copy")
                     alert("コピーしました！ : " + copyTarget.value);
-                }else{
-                    alert('コピーできなかったよ〜')
-                }
             }
         </script>
     </body>
