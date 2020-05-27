@@ -12,11 +12,24 @@ class SunabarController extends Controller
 {
 
     // 振込依頼のAPIを叩きます
-    public function post($amount)
+    public function post(Request $request)
     {
         $url = 'https://api.sunabar.gmo-aozora.com/personal/v1/transfer/request';
 
+        echo "sunabar";
+        echo $request;
+
+        // postされた値を受け取る
+        $amount = $request->input('amount');
+        $comment = $request->input('comment');
+        $distUser_id = $request->input('distUser_id');
+
+        // DBから読み出し
+        // Auth::user
+
         // userIDのDBをもとに必要なデータを流し込む
+
+
         // 送金元データ
         $token = 'add your token';
         $accountId = '301010000864';
@@ -115,6 +128,17 @@ class SunabarController extends Controller
         // echo $response->getStatusCode();
     }
 
+    // test
+    public function show()
+    {
+
+        $temp = Transfer::findOrFail(2);
+        $amount = $temp["amount"];
+        // echo "hello";
+        // echo $temp;
+        // echo $amount;
+        return view('layouts/contact');
+    }
 
     public function test(TransferRequest $request)
     {
