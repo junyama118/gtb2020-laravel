@@ -1,47 +1,98 @@
-@media screen and (max-width: 900px){
     body{
-        background: #F7AB19;
+        background: #FFFFFF;
+        font-family: 'ヒラギノ丸ゴ ProN','Hiragino Maru Gothic ProN',sans-serif;
         
     }
-    h1{
-        color:#000000;
-        text-align:center;
-        background-color:#C4C4C4;
-        margin-top:0px;
-        background-size:cover;
-        height:161px;
-        vertical-align:middle;
+        .parentElement{
+            background-color:#F7AB19;
+            width:375px;
+            height:812px;
+            position:relative;
+            top:0;
+
+        }
         
-
-
-    }
-
-    .questiontitle {
-        font-family:'Franklin Gothic Medium';
-        font-size:13px;
-        color:#000000;
-    }
-    input.questioncolum{
-        width:326px;
-        height:40px;
-        font-size:14px;
-        border-radius:20px;
-        text-align:center;
-        margin-bottom:5px;
-    }
-
-    .submitbottom {
-        background-color:#119A81;
-        box-shadow:0px 4px 4px;
-        width:285px;
-        height:60px;
-        text-align:center;
-        margin-top:92px;
-        border-radius:45px;
-        color:#FFFFFF;
-        font-size:18px;
-    }
+        h1{
+            color:#000000;
+            text-align:center;
+            margin-top:0px;
+            background-size:cover;
+            height:161px;
+            vertical-align:middle;
+        
+        
+        }
+    
+        .questiontitle {
+            
+            font-size:13px;
+            color:#000000;
+        }
+        .title_username{
+            position:absolute;
+            top:20%;
+            left:10%;
+        }
+        .title_mailadress{
+            position:absolute;
+            top:29%;
+            left:10%;
+        }
+        .title_password{
+            position:absolute;
+            top:38%;
+            left:10%;
+        }
+        .title_checkpassword{
+            position:absolute;
+            top:47%;
+            left:10%;
+        }
+        .usernamecolum{
+            position:absolute;
+            top:23%;
+            left:10%;
+        }
+        .questioncolum{
+            width:283.62px;
+            height:30px;
+            font-size:14px;
+            border-radius:20px;
+            text-align:center;
+            margin-bottom:5px;
+        }
+        .emailcolum{
+            position:absolute;
+            top:32%;
+            left:10%;
+        }
+        .passwordcolum{
+            position:absolute;
+            top:41%;
+            left:10%;
+        }
+        .checkpasswordcolum{
+            position:absolute;
+            top:50%;
+            left:10%;
+        }
+        
+    
+        .submitbottom {
+            position:absolute;
+            top:77%;
+            left:10%;
+            background-color:#119A81;
+            box-shadow:0px 4px 4px;
+            width:285px;
+            height:60px;
+            text-align:center;
+            margin-top:92px;
+            border-radius:45px;
+            color:#FFFFFF;
+            font-size:18px;
+        }
     
 
   
-}
+
