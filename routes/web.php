@@ -12,6 +12,7 @@
 */
 Auth::routes();
 
+
 Route::get('/', function(){
     return view('welcome');
 });
@@ -28,10 +29,6 @@ Route::get('/mypage', function(){
     return view('layouts/mypage');
 });
 
-Route::get('/soukin_finish', function(){
-    return view('layouts/soukin_finish');
-});
-
 // 送金ページ
 Route::get('/transfer', function(){
     return view('transfer');
@@ -40,6 +37,11 @@ Route::get('/transfer', function(){
 Route::get('/transfer_check', function(){
     return view('transfer_check');
 });
+
+// sunabarAPI
+Route::get('/sunabar', 'SunabarController@get');
+Route::post('/sunabar', 'SunabarController@post');
+
 
 Route::get('/transfer_complete', function(){
     return view('layouts/soukin_finish');
@@ -56,10 +58,6 @@ Route::prefix('tester')->group(function () {
 });
 
 Route::get('/test_create', 'RegisterController@create');
-
-Route::get('/test_welcome', function(){
-    return view('welcome');
-});
 
 Route::get('/home', 'HomeController@index')->name('home');
 
