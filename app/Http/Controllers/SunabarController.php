@@ -73,11 +73,14 @@ class SunabarController extends Controller
         
         curl_close($curl);
         
-        // if ($err) {
-        //     echo "cURL Error #:" . $err;
-        // } else {
-        //     echo $response;
-        // }
+        if ($err) {
+            echo "cURL Error #:" . $err;
+            // ページ遷移、多分こんな感じ
+            // return view('layouts.soukin-finish', );
+        } else {
+            
+            echo $response;
+        }
     }    
 
     /**
