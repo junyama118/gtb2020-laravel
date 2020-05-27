@@ -41,10 +41,9 @@ Route::get('/transfer_check', function(){
     return view('transfer_check');
 });
 
-// api.phpに書くべきかも
 // sunabarAPI
 Route::get('/sunabar', 'SunabarController@get');
-Route::get('/sunabar/transfer/{amount}', 'SunabarController@post');
+Route::post('/sunabar', 'SunabarController@post');
 
 
 Route::get('/transfer_complete', function(){
@@ -62,3 +61,8 @@ Route::prefix('tester')->group(function () {
 });
 
 Route::get('/test_create', 'RegisterController@create');
+// Route::get('/test_input', function(){
+//     return view('layouts/test_input');
+// });
+
+Route::get('/transfer_test', 'SunabarController@show');
