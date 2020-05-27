@@ -10,46 +10,47 @@
     </head>
 
     <body>
-        
-        <div class="title">
-            <h1>LOGO:おごってください</h1>
+        <div class="parentElement">
+            <div class="title">
+                <h1>LOGO:おごってください</h1>
+            </div>
+
+
+            <div class="createaccount-container">
+
+                <form action="#" method="post">
+                    <div class="questiontitle title_username">
+                        <label for="askusername">ユーザー名:</label>
+                    </div>
+                    <div>
+                        <input type="text" id="askusername" required class="questioncolum usernamecolum">
+                    </div>
+                    <div class="questiontitle title_mailadress">
+                        <label for="addmailadress">メールアドレス:</label>
+                    </div>
+                    <div>
+                        <input type="email" id="addmailadress" required class="questioncolum emailcolum">
+                    </div>
+                    <div class="questiontitle title_password">
+                        <label for="addpassword">パスワード:</label>
+                    </div>
+                    <div>
+                        <input type="password" id="addpassword" required class="questioncolum passwordcolum">
+                    </div>
+                    <div class="questiontitle title_checkpassword">
+                        <label for="checkpassword">パスワード（確認）:</label>
+                    </div>
+                    <div>
+                        <input type="password" id="checkpassword" required class="questioncolum ckeckpasswordcolum" oninput="checkpass(this)">
+                    </div>
+
+                    <input type="submit" name="submitvalue" value="新規登録" class="submitbottom">
+
+                </form>        
+            </div>
+
         </div>
-        
 
-        <div class="createaccount-container">
-
-            <form action="#" method="post">
-                <div class="questiontitle">
-                    <label for="askusername">ユーザー名:</label>
-                </div>
-                <div>
-                    <input type="text" id="askusername" required class="questioncolum">
-                </div>
-                <div class="questiontitle">
-                    <label for="addmailadress">メールアドレス:</label>
-                </div>
-                <div>
-                    <input type="email" id="addmailadress" required class="questioncolum">
-                </div>
-                <div class="questiontitle">
-                    <label for="addpassword">パスワード:</label>
-                </div>
-                <div>
-                    <input type="password" id="addpassword" required class="questioncolum">
-                </div>
-                <div class="questiontitle">
-                    <label for="checkpassword">パスワード（確認）:</label>
-                </div>
-                <div>
-                    <input type="password" id="checkpassword" required class="questioncolum" oninput="checkpass(this)">
-                </div>
-
-                <input type="submit" name="submitvalue" value="新規登録" class="submitbottom">
-
-            </form>        
-        </div>
-
-        
         <script language="JavaScript" type="text/javascript">
             function checkpass(input){
                 var pass = document.getElementById("addpassword").value;
