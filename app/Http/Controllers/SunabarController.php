@@ -2,9 +2,14 @@
 
 namespace App\Http\Controllers;
 
+
+use Illuminate\Support\Facades\Auth;
 use App\Http\Requests\TransferRequest;
+
+use App\User;
 use App\Transfer;
 use App\Account;
+
 use Illuminate\Http\Request;
 use \GuzzleHttp\Client;
 
@@ -16,13 +21,29 @@ class SunabarController extends Controller
     {
         $url = 'https://api.sunabar.gmo-aozora.com/personal/v1/transfer/request';
 
-        echo "sunabar";
-        echo $request;
-
         // postされた値を受け取る
         $amount = $request->input('amount');
         $comment = $request->input('comment');
         $distUser_id = $request->input('distUser_id');
+        echo $distUser_id . "\n";
+
+        $srcUser_id = Auth::id();
+
+        Transfer::create([
+            'srcUser_id' => $srcUser_id,
+            'distUser_id' => $distUser_id,
+            'amount'=> $amount,
+            'comment' => $comment,
+        ]);
+        
+        // データ抽出
+        $query = Account::query();
+        $query->where('user_id', $srcUser_id);
+        $temp = $query -> get();
+        $hoge = $temp[0];
+        echo $hoge["account_id"];
+
+        return;
 
         // DBから読み出し
         // Auth::user
@@ -51,13 +72,13 @@ class SunabarController extends Controller
                 'beneficiaryBranchCode' => $beneficiaryBranchCode,
                 'accountTypeCode' => '1',
                 'accountNumber' => $accountNumber,
-                'beneficiaryName' => 'ｶ)ｱｵｿﾞﾗｻﾝ' 
+                'beneficiaryName' => 'ｶ)ｱｵｿﾞﾗｻﾝ' //直したい
             ]
         ];
             
         $postfields = [
             'accountId' => $accountId,
-            'remitterName' => 'ｱｵｿﾞﾗ ﾃｽﾄ',
+            'remitterName' => 'ｱｵｿﾞﾗ ﾃｽﾄ', //直したい
             'transferDesignatedDate' => date("Y-m-t"),
             'transferDateHolidayCode' => '1',
             'totalCount' => '1',
