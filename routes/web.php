@@ -65,4 +65,4 @@ Route::get('/test_create', 'RegisterController@create');
 //     return view('layouts/test_input');
 // });
 
-Route::get('/transfer_test', 'SunabarController@show');
+// Route::get('/transfer_test', 'SunabarController@show');
