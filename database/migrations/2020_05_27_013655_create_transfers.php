@@ -16,8 +16,8 @@ class CreateTransfers extends Migration
     {
         Schema::create('transfers', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('srcUserID');
-            $table->string('distUserID');
+            $table->integer('srcUser_id');
+            $table->integer('distUser_id');
             $table->string('amount');
             $table->string('comment')->nullable();
             $table->timestamps();

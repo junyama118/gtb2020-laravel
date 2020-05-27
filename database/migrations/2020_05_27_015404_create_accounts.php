@@ -15,11 +15,11 @@ class CreateAccounts extends Migration
     public function up()
     {
         Schema::create('accounts', function (Blueprint $table) {
-            $table->string('userID');
-            $table->string('token');
-            $table->string('accountId');
-            $table->string('accountNumber');
-            $table->string('beneficiaryBranckCode');
+            $table->integer('user_id')->primary();
+            $table->string('token')->nullable();
+            $table->string('account_id')->nullable();
+            $table->string('accountNumber')->nullable();
+            $table->string('beneficiaryBranckCode')->nullable();
             $table->timestamps();
         });
     }
