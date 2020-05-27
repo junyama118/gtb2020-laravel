@@ -10,14 +10,11 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+Auth::routes();
 
 
 Route::get('/', function(){
-    return view('layouts/welcome');
-});
-
-Route::get('/login', function(){
-    return view('login');
+    return view('welcome');
 });
 
 Route::get('/timeline', function(){
@@ -47,7 +44,7 @@ Route::post('/sunabar', 'SunabarController@post');
 
 
 Route::get('/transfer_complete', function(){
-    return view('transfer_complete');
+    return view('layouts/soukin_finish');
 });
 
 // test page
@@ -61,8 +58,9 @@ Route::prefix('tester')->group(function () {
 });
 
 Route::get('/test_create', 'RegisterController@create');
-// Route::get('/test_input', function(){
-//     return view('layouts/test_input');
-// });
 
-// Route::get('/transfer_test', 'SunabarController@show');
+Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/test_login', function(){
+    return view('login');
+});
