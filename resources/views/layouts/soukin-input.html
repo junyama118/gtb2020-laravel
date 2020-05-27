@@ -49,8 +49,8 @@
                         <div class="num_btn" data-index-id= 9>9</div>
                     </section>
                     <section class="row">
-                        <div class="num_btn" data-index-id= 1>00</div>
-                        <div class="num_btn" data-index-id= 1>0</div>
+                        <div class="num_btn" data-index-id= 00>00</div>
+                        <div class="num_btn" data-index-id= 0>0</div>
                         <div class="num_btn"></div>
                     </section>
                 </div>
@@ -61,6 +61,27 @@
             </button>
             
         </div>
+        <script>
+            'use strict'
+            {
+                const num_btn = document.querySelectorAll('.num_btn');
+                let total = 0;
+
+                num_btn.forEach(index =>{
+                    index.addEventListener('click',() => {
+                        console.log(index.dataset.indexId)
+                        if(total == 0){
+                            total = index.dataset.indexId;
+                        }else{
+                            //２つ目の数字ボタンを入力した時に１つ目の隣に表示させる
+                            total +=  index.dataset.indexId
+                        }
+                        //数字ボタンに対応した数字を表示される
+                        amount.textContent = total;
+                    })
+                })
+            }
+        </script>
 
     
     </body>
