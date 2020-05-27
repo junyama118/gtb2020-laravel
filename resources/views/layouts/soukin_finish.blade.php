@@ -23,7 +23,7 @@
         </div>
 
     <div class="homebtn">
-         <button type="button" onclick="" value="遷移">
+         <button type="button" onclick="'location.href='./">
             ホームにもどる
          </button>
      </div>
