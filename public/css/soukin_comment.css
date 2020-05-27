@@ -1,0 +1,91 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    display: flex;
+    justify-content: center;
+    color: #ffffff;
+    background: #F7AB19;
+    font-family: 'ヒラギノ丸ゴ ProN','Hiragino Maru Gothic ProN',sans-serif;
+}
+.iphoneX{
+    position: relative;
+    width: 375px;
+    height: 812px;
+    background: #F7AB19;
+}
+.header{
+    position: absolute;
+    border: 3px solid #F7AB19;
+    width: 375px;
+    height: 58px;
+    box-sizing: border-box;
+    padding: 10px;
+    background: #F7AB19;
+}
+h2{
+    position: absolute;
+    text-align: center;
+    font-size: 20px;
+    margin-left: 60px;
+}
+#back_btn{
+    position: absolute;
+    padding: 3px;
+    left: 10px;
+    top: 14px;
+}
+.user{
+    position: relative;
+    width: 375px;
+    height: 150px;
+    box-sizing: border-box;
+    background: #F1F1F1;
+    top: 100px;
+}
+#icon{
+    position: absolute;
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: #ffffff;
+    right: 10px;
+    left: 10px;
+    top: 30px;
+}
+.usermsg{
+    position: relative;
+    left: 150px;
+    top: 40px;
+    font-size: 20px;
+    color: #000000;
+}
+.money{
+    position: absolute;
+    top: 250px;
+}
+#amount{
+    position: absolute;
+    font-size: 90px;
+    left: 230px;
+}
+#yen{
+    position: absolute;
+    font-size: 36px;
+    top: 80px;
+    bottom: 30px;
+    left: 300px;
+}
+.comment_area{
+    position: absolute;
+    width: 375px;
+    box-sizing: border-box;
+    top:430px;
+}
+#next_btn{
+    position: absolute;
+    left: 160px;
+}
+
