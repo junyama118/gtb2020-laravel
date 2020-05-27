@@ -11,7 +11,6 @@
 |
 */
 
-
 Route::get('/', function(){
     return view('layouts/welcome');
 });
@@ -30,6 +29,10 @@ Route::get('/contact', function(){
 
 Route::get('/mypage', function(){
     return view('layouts/mypage');
+});
+
+Route::get('/soukin_finish', function(){
+    return view('layouts/soukin_finish');
 });
 
 // 送金ページ
