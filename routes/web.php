@@ -10,13 +10,10 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+Auth::routes();
 
 Route::get('/', function(){
-    return view('layouts/welcome');
-});
-
-Route::get('/login', function(){
-    return view('login');
+    return view('welcome');
 });
 
 Route::get('/timeline', function(){
@@ -45,7 +42,7 @@ Route::get('/transfer_check', function(){
 });
 
 Route::get('/transfer_complete', function(){
-    return view('transfer_complete');
+    return view('layouts/soukin_finish');
 });
 
 // test page
@@ -64,6 +61,8 @@ Route::get('/test_welcome', function(){
     return view('welcome');
 });
 
-Auth::routes();
-
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/test_login', function(){
+    return view('login');
+});
