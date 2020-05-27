@@ -19,28 +19,49 @@
         <div class="createaccount-container">
 
             <form action="#" method="post">
-                <p>ユーザー名<span class="askuserame">(?)</span></p>
-                <input type="text" name="addusername" size="14">
+                <div class="questiontitle">
+                    <label for="askusername">ユーザー名:</label>
+                </div>
+                <div>
+                    <input type="text" id="askusername" required class="questioncolum">
+                </div>
+                <div class="questiontitle">
+                    <label for="addmailadress">メールアドレス:</label>
+                </div>
+                <div>
+                    <input type="email" id="addmailadress" required class="questioncolum">
+                </div>
+                <div class="questiontitle">
+                    <label for="addpassword">パスワード:</label>
+                </div>
+                <div>
+                    <input type="password" id="addpassword" required class="questioncolum">
+                </div>
+                <div class="questiontitle">
+                    <label for="checkpassword">パスワード（確認）:</label>
+                </div>
+                <div>
+                    <input type="password" id="checkpassword" required class="questioncolum" oninput="checkpass(this)">
+                </div>
 
-                <p>メールアドレス</p>
-                <input type="email" name="addmailadress" size="14">
+                <input type="submit" name="submitvalue" value="新規登録" class="submitbottom">
 
-                <p>メールアドレス（確認）</p>
-                <input type="email" name="checkmailadress" size="14">
-
-                <p>パスワード<span class="askpassword">(?)</span></p>
-                <input type="password" name="addpassword" size="14">
-
-                <!--<p>どちらを使用しますか？</p>-->
-                <input type="submit" name="submitvalue" value="新規登録">
-
-                
-
-            </form>
-            
-        
+            </form>        
         </div>
 
+        
+        <script language="JavaScript" type="text/javascript">
+            function checkpass(input){
+                var pass = document.getElementById("addpassword").value;
+                var passConfirm = input.value;
+                if(pass != passConfirm){
+                    input.setCustomValidity('パスワードが一致しません');
+                }else{
+                    input.setCustomValidity('');
+                }
+                
+            }
+        </script>
 
-    </body>
+</body>
 </html>
