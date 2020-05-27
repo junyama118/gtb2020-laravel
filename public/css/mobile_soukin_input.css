@@ -3,6 +3,8 @@
     padding: 0px;
 }
 body{
+    display: flex;
+    justify-content: center;
     color: #ffffff;
     background: #F7AB19;
     font-family: 'ヒラギノ丸ゴ ProN','Hiragino Maru Gothic ProN',sans-serif;
@@ -12,6 +14,7 @@ body{
     width: 375px;
     height: 812px;
     background: #F7AB19;
+
 }
 .header{
     position: absolute;
