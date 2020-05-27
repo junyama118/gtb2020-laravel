@@ -49,8 +49,8 @@
                         <div class="num_btn" data-index-id= 9>9</div>
                     </section>
                     <section class="row">
-                        <div class="num_btn" data-index-id= 00>00</div>
-                        <div class="num_btn" data-index-id= 0>0</div>
+                        <div class="num_btn" id="zerozero" data-index-id= 00>00</div>
+                        <div class="num_btn" id="zero" data-index-id= 0>0</div>
                         <div class="num_btn"></div>
                     </section>
                 </div>
@@ -80,9 +80,21 @@
                         amount.textContent = total;
                     })
                 })
+                
+            const clear = document.getElementById('clear')
+            clear.addEventListener('click', () => {
+                reset();
+            })
+
+            function reset(){
+                total = 0;
+                amount.textContent = 0;
             }
-        </script>
+        }
+
+
 
     
+        </script>
     </body>
 </html>
