@@ -59,3 +59,11 @@ Route::prefix('tester')->group(function () {
 });
 
 Route::get('/test_create', 'RegisterController@create');
+
+Route::get('/test_welcome', function(){
+    return view('welcome');
+});
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
