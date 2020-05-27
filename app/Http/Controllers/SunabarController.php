@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\TransferRequest;
+use App\Transfer;
+use App\Account;
 use Illuminate\Http\Request;
 use \GuzzleHttp\Client;
 
@@ -12,6 +15,8 @@ class SunabarController extends Controller
     public function post($amount)
     {
         $url = 'https://api.sunabar.gmo-aozora.com/personal/v1/transfer/request';
+
+        // userIDのDBをもとに必要なデータを流し込む
         // 送金元データ
         $token = 'add your token';
         $accountId = '301010000864';
@@ -108,5 +113,18 @@ class SunabarController extends Controller
         $response_body = (string) $response->getBody();
         // echo $response_body;
         // echo $response->getStatusCode();
+    }
+
+
+    public function test(TransferRequest $request)
+    {
+        $transfer = Transfer::create([
+            'srcUser_id' => $request -> input('srcUser_id'),
+            'distUser_id' => $request -> input('distUser_id'),
+            'amount'=> $request -> input('amount') ,
+            'comment' => $request -> input('comment'),
+        ]);
+        return response()->json($transfer, 201);
+
     }
 }

@@ -41,9 +41,11 @@ Route::get('/transfer_check', function(){
     return view('transfer_check');
 });
 
+// api.phpに書くべきかも
 // sunabarAPI
 Route::get('/sunabar', 'SunabarController@get');
 Route::get('/sunabar/transfer/{amount}', 'SunabarController@post');
+
 
 Route::get('/transfer_complete', function(){
     return view('transfer_complete');
