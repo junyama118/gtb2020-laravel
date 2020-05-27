@@ -1,0 +1,17 @@
+@media screen and (max-width: 900px){
+    body{
+        background: #F7AB19;
+    }
+    .header{
+        left: 0px;
+        top: 0px;
+        background: #C4C4C4;
+    }
+    #mail-form{
+        width: 300px;
+        height: 20px;
+        border-radius: 20px;
+    }
+
+  
+}
