@@ -16,7 +16,6 @@
         h1{
             color:#000000;
             text-align:center;
-            /*background-color:#C4C4C4;*/
             margin-top:0px;
             background-size:cover;
             height:161px;
@@ -32,61 +31,26 @@
         }
         .title_username{
             position:absolute;
-            /* 
-            top: ;
-            bottom: ;
-            left: ;
-            right: ;
-            border: 1px solid red;
-            */
             top:20%;
             left:10%;
         }
         .title_mailadress{
             position:absolute;
-            /* 
-            top: ;
-            bottom: ;
-            left: ;
-            right: ;
-            border: 1px solid red;
-            */
             top:29%;
             left:10%;
         }
         .title_password{
             position:absolute;
-            /* 
-            top: ;
-            bottom: ;
-            left: ;
-            right: ;
-            border: 1px solid red;
-            */
             top:38%;
             left:10%;
         }
         .title_checkpassword{
             position:absolute;
-            /* 
-            top: ;
-            bottom: ;
-            left: ;
-            right: ;
-            border: 1px solid red;
-            */
             top:47%;
             left:10%;
         }
         .usernamecolum{
             position:absolute;
-            /* 
-            top: ;
-            bottom: ;
-            left: ;
-            right: ;
-            border: 1px solid red;
-            */
             top:23%;
             left:10%;
         }
@@ -100,37 +64,16 @@
         }
         .emailcolum{
             position:absolute;
-            /* 
-            top: ;
-            bottom: ;
-            left: ;
-            right: ;
-            border: 1px solid red;
-            */
             top:32%;
             left:10%;
         }
         .passwordcolum{
             position:absolute;
-            /* 
-            top: ;
-            bottom: ;
-            left: ;
-            right: ;
-            border: 1px solid red;
-            */
             top:41%;
             left:10%;
         }
         .ckeckpasswordcolum{
             position:absolute;
-            /* 
-            top: ;
-            bottom: ;
-            left: ;
-            right: ;
-            border: 1px solid red;
-            */
             top:50%;
             left:10%;
         }
