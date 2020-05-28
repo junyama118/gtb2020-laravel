@@ -29,6 +29,10 @@ table{
     box-sizing: border-box;
     border-collapse: collapse;
 }
+table td{
+    padding: 3px;
+    border-bottom: 1px solid #F8BC47;
+}
 
 .friend_table{
     top: 10%;
