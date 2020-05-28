@@ -1,0 +1,116 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    background: #FFE81A;
+    font-family: 'ヒラギノ丸ゴ ProN','Hiragino Maru Gothic ProN',sans-serif;
+}
+.iphoneX{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #FFE81A;
+}
+.header{
+    width: 100vw;
+    height: 100px;
+    left: 0px;
+    top: 0px;
+    margin-top: 20px;
+}
+h2{
+   align-items: center;
+   justify-content: center;
+   font-size: 33px;
+   text-align: center;
+   margin-top: 10px;
+}
+#ogorare_tarou{
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    right: 5px;
+    top: 90px;
+}
+
+#msg_frame{
+    position: relative;
+    width: 380px;
+    height: 300px;
+    margin: 10px;
+    top: 40px;
+}
+
+.messeage{
+    position: absolute;
+    padding: 5px;
+    top: 230px;
+}
+#comment_first{
+    top: 290px;
+    left: 100px;
+    line-height: 30px;
+}
+
+#amount{
+    position: absolute;
+    font-size: 50px;
+    right: 100px;
+    top: 50px;
+    
+}
+#yen{
+    position: absolute;
+    font-size: 20px;
+    left: 120px;
+    top: 87px;
+   
+}
+#comment_second{
+    position: absolute;
+    top: 120px;
+    line-height: 30px;
+}
+#coin_fukidashi{
+    position: absolute;
+    width: 270px;
+    height: 190px;
+    right: 10px;
+    bottom: 190px;
+}
+#comment{
+    position: absolute;
+    width: 200px;
+    height: 180px;
+    bottom: 150px;
+    left: 150px;
+}
+#send_username{
+    position: absolute;
+    padding-top: 15px;
+    left: 15px;
+}
+
+#coinkun{
+    position: absolute;
+    width: 100px;
+    height:100px;
+    bottom: 180px;
+    left:5px;
+    transform: scale(-1,1);
+}
+
+#home_back{
+    position: absolute;
+    width: 375px;
+    height: 110px;
+    background: #FFE81A;
+    bottom: 60px;
+    border: none;
+    right: 3px;
+    left: 1px;
+}

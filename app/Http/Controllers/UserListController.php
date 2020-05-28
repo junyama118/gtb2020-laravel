@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use App\User;
 use App\Account;
+use App\Transfer;
 
 use \GuzzleHttp\Client;
 
@@ -14,8 +15,29 @@ class UserListController extends Controller
 {
     //
     public function get_userlist(){
-        $users = User::all();
-        return view('list')->with('users',$users);
+
+        // flagチェック
+        // if(flgaが上がっている)->おごられましたページへ！
+        $id = Auth::id();
+        
+        $temp = Transfer::where('distUser_id', $id)
+        ->where('ogoriFlag', '1') -> get();
+
+        try{
+            $flag = $temp[0]['ogoriFlag'];
+            // flag下げる
+            $data = Transfer::where('distUser_id', $id)
+                ->where('ogoriFlag', '1')->update(['ogoriFlag' => '0']);
+            $comment = $temp[0]['comment'];
+            $srcUser = User::findOrFail($temp[0]['srcUser_id']);
+            $name = $srcUser['name'];
+
+            return view('', compact('name', 'comment')); 
+        }
+        catch ( \Exception $ex){
+            $users = User::all();
+            return view('list')->with('users',$users);
+        }
     }
 
     public function create(Request $request)
@@ -47,8 +69,7 @@ class UserListController extends Controller
             'token' => $request -> input('token'),
             'account_id'=> $obj->accounts[0]->accountId,
             'accountNumber' => $request -> input('accountNumber'),
-            'beneficiaryBranckCode'=>$request -> input('branckCode'),
-            
+            'beneficiaryBranckCode'=>$request -> input('BranckCode'),
         ]);
 
         return redirect('/users');
