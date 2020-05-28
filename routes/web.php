@@ -30,9 +30,12 @@ Route::get('/mypage', function(){
 });
 
 // 送金ページ
-Route::get('/transfer', function(){
-    return view('transfer');
+// 金額入力画面
+Route::get('/transfer_input', function(){
+    return view('layouts/soukin_input');
 });
+// 
+Route::get('/transfer_comment/{amount}', 'SunabarController@return');
 
 Route::get('/transfer_check', function(){
     return view('transfer_check');
