@@ -23,7 +23,7 @@ class SunabarController extends Controller
         $amount = $request->input('amount');
         $comment = $request->input('comment');
         $distUser_id = $request->input('distUser_id');
-
+        return;
         // DBから読み出し
         // Auth::user
 
@@ -126,6 +126,11 @@ class SunabarController extends Controller
         $response_body = (string) $response->getBody();
         // echo $response_body;
         // echo $response->getStatusCode();
+    }
+
+    public function return($amount)
+    {
+        return view('layouts/soukin_comment', compact('amount'));
     }
 
     // test
