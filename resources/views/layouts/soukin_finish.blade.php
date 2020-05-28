@@ -28,8 +28,8 @@
             </div>
 
                 <button type="button" onclick= "location.href='https://bank.sunabar.gmo-aozora.com/bank/notices/important'">
-                    <img src="/img/home_back.png" id="home_back"/>
-                 </button>
+                    <img src="/img/go_aozora.png" id="home_back"/>
+                </button>
                  
             </div>
         </div>

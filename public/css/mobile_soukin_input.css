@@ -5,20 +5,19 @@
 body{
     display: flex;
     justify-content: center;
-    color: #ffffff;
-    background: #F7AB19;
+    color: #848484;
+    background: #FFE81A;
     font-family: 'ヒラギノ丸ゴ ProN','Hiragino Maru Gothic ProN',sans-serif;
 }
 .iphoneX{
     position: relative;
     width: 375px;
     height: 812px;
-    background: #F7AB19;
+    background: #FFE81A;
 
 }
 .header{
     position: absolute;
-    border: 3px solid #F7AB19;
     width: 375px;
     height: 58px;
     box-sizing: border-box;
@@ -29,34 +28,25 @@ h2{
     text-align: center;
     font-size: 20px;
     margin-left: 60px;
+    padding: 5px;
 }
 #back_btn{
     position: absolute;
-    padding: 3px;
-    left: 10px;
-    top: 14px;
+    width: 42px;
+    height: 42px;
+
 }
 .user{
     position: relative;
     width: 353px;
     height: 69px;
-    background: #F8BC47;
+    background: #FFF48C;
     border-radius: 14px;
     top: 90px;
     left:5px;
     padding: 5px;
 }
-#icon{
-    position: absolute;
-    display: inline-block;
-    width: 43px;
-    height: 43px;
-    border-radius: 50%;
-    background: #ffffff;
-    padding: 5px;
-    top: 15px;
-    left: 20px;
-}
+
 #username{
     text-align: center;
     margin-top: 20px;
@@ -91,7 +81,7 @@ h2{
 .num_btn,#clear{
     width: 114px;
     height: 50px;  
-    background: #F8BC47;
+    background: #FFF48C;
     border-radius: 5px;
     text-align: center;
     line-height: 50px;
@@ -103,7 +93,7 @@ h2{
     position: absolute;
     width: 359px;
     height: 100px;
-    background: #F7AB19;
+    background: #FFE81A;
     top: 700px;
     left: 5px;
     border: none;
