@@ -3,12 +3,14 @@
 <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/list.css">
+
 </head>
 <body>
 
     <div class="container">
         
-    <h1>一覧表示</h1>
+    <h2>フレンド一覧</h2>
 
         <table class="table table-striped">
         @foreach($users as $user)
@@ -20,7 +22,7 @@
                     <form method="post" action="/transfer_input">
                         <input type="hidden" name="_token" value="{{csrf_token()}}">
                         <input type="hidden" name="id" value="{{$user->id}}">
-                        <input type="submit" value="奢る！" class="btn btn-danger btn-sm btn-destroy">
+                        <input type="image" src="/Volumes/GoogleDrive/マイドライブ/@GTB/おごってアプリ/img/ogoru_btn.png" id="ogoru_btn">
                     </form>
                 </td>
             </tr>

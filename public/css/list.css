@@ -1,0 +1,21 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    display: flex;
+    justify-content: center;
+    background: #F7AB19;
+    font-family: 'ヒラギノ丸ゴ ProN','Hiragino Maru Gothic ProN',sans-serif;
+}
+.container{
+    position: relative;
+    width: 375px;
+    height: 812px;
+    background: #F7AB19;
+}
+
+#ogoru_btn{
+    width: 100px;
+    height: 100px;
+}
