@@ -30,6 +30,7 @@ Route::get('/mypage', function(){
 });
 
 // 送金ページ
+
 Route::get('/transfer', function(){
     return view('transfer');
 });
@@ -64,3 +65,4 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/test_login', function(){
     return view('login');
 });
+
