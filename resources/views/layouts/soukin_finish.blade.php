@@ -12,7 +12,7 @@
         <div class="iphoneX">
             <div class="header">
                 <h2>送金手続き完了！</h2>
-                <img src="/Volumes/GoogleDrive/マイドライブ/@GTB/おごってアプリ/img/hanko.png" id="hanko">
+                <img src="/img/hanko.png" id="hanko">
             </div>
 
 
@@ -27,7 +27,7 @@
                 </div>
             </div>
 
-                <button type="button" onclick="location.href='./'">
+                <button type="button" onclick= "location.href='https://bank.sunabar.gmo-aozora.com/bank/notices/important'">
                     <img src="/img/home_back.png" id="home_back"/>
                  </button>
                  
