@@ -29,6 +29,12 @@ Route::get('/mypage', function(){
     return view('layouts/mypage');
 });
 
+Route::get('/inputaccountinfo', function(){
+    return view('layouts/inputaccountinfo');
+});
+
+Route::post('/users', 'UserListController@create');
+
 // 送金ページ
 // 金額入力画面
 Route::post('/transfer_input', 'UserListController@postUserID');
