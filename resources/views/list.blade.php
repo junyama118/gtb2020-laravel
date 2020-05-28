@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <link rel="stylesheet" href="/Volumes/GoogleDrive/マイドライブ/@GTB/おごってアプリ/list.css">
+        <link rel="stylesheet" href="{{asset('css/list.css')}}">
         <meta name="viewport" content="width=device-width,initial-scale=1">
 
     </head>
@@ -24,7 +24,7 @@
                                 <input type="hidden" name="_token" value="{{csrf_token()}}">
                                 <input type="hidden" name="id" value="{{$user->id}}">
                                 <input type="hidden" name="name" value="{{$user->name}}">
-                                <input type="image" src="/Volumes/GoogleDrive/マイドライブ/@GTB/おごってアプリ/img/ogoru_btn.png" id="ogoru_btn">
+                                <input type="image" src="/img/ogoru_btn.png" id="ogoru_btn">
                             </form>
                         </td>
                      </tr>
