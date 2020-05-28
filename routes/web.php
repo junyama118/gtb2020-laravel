@@ -61,6 +61,3 @@ Route::get('/test_create', 'RegisterController@create');
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/test_login', function(){
-    return view('login');
-});
