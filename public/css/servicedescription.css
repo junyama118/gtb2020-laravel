@@ -1,0 +1,72 @@
+
+    *{
+        margin: 0px;
+        padding: 0px;
+    }
+    body{display: flex;
+        justify-content: center;
+        color: #000000;
+        background-color: #FFFFFF;
+        font-family: 'ヒラギノ丸ゴ ProN','Hiragino Maru Gothic ProN',sans-serif;
+    }
+    .iphoneX{
+        position: relative;
+        width: 375px;
+        height: 812px;
+        background: #F7AB19;
+        top:0;
+        margin:0 auto;
+    }
+    .img_header_logo{
+        position: absolute;
+        background-size:contain;
+        top:-15px;
+        height:18%;
+        left:1.5%;
+    }
+    .submit_createaccount{
+        position:absolute;
+        top:14%;
+        left:5%;
+        background-color:#E25F00;
+        box-shadow:0px 0px 0px;
+        width:158px;
+        height:54px;
+        text-align:center;
+        margin-top:10px;
+        border-radius:40px;
+        color:#FFFFFF;
+        font-size:18px;
+        border: 3px solid #E25F00;
+    }
+    .submit_login{
+        position:absolute;
+        top:14%;
+        left:55%;
+        background-color:#119A81;
+        box-shadow:0px 0px 0px;
+        width:158px;
+        height:54px;
+        text-align:center;
+        margin-top:10px;
+        border-radius:40px;
+        color:#FFFFFF;
+        font-size:18px;
+        border: 3px solid #119A81;
+    }
+    /*.titile_servicedescription{
+        position:absolute;
+        font: size 36px;
+        top:35%;
+        left:32%;
+        background-color:#F7AB19;
+        text-align:center;
+        margin-top:10px;
+        color:#000000;
+    }*/
+    .img_servicedescription{
+        position: absolute;
+        background-size:contain;
+        top:24.5%;
+        width: 375px;
+    }
