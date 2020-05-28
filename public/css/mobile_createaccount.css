@@ -1,13 +1,13 @@
 body{
     display: block;
-    background: #F7AB19;
+    background: #FFE81A;
     font-family: 'ヒラギノ丸ゴ ProN','Hiragino Maru Gothic ProN',sans-serif;
     margin: 0px;
     padding: 0px;
     
 }
     .iphoneX{
-        background-color:#F7AB19;
+        background-color:#FFE81A;
         width:375px;
         height:812px;
         position:relative;
@@ -26,12 +26,20 @@ body{
         max-width: 900px;
         position: absolute;
         max-width: 900px;
-        border: 3px solid #F7AB19;
+        border: 3px solid #FFE81A;
         width: 375px;
         height: 58px;
         box-sizing: border-box;
         padding: 10px;
     }
+    .img_header_logo{
+        position: absolute;
+        background-size:contain;
+        top:-15px;
+        height:18%;
+        left:1.5%;
+    }
+
 
     .questiontitle {
         
@@ -101,7 +109,7 @@ body{
         text-align:center;
         margin-top:60px;
         border-radius:45px;
-        color:#FFFFFF;
+        color:#000000;
         font-size:18px;
         border: 3px solid #119A81;
     }
