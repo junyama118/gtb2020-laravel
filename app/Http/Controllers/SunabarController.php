@@ -34,6 +34,7 @@ class SunabarController extends Controller
             'distUser_id' => $distUser_id,
             'amount'=> $amount,
             'comment' => $comment,
+            'ogoriFlag' => True,
         ]);
         
         // srcのデータ抽出
