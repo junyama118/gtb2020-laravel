@@ -4,16 +4,15 @@
         <meta charset="utf-8">
         <title>コメント入力</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="{{ asset('css/soukin_comment.css') }}">
+       <link rel="stylesheet" href="{{ asset('css/soukin_comment.css') }}">¥
+
     </head>
 
     <body>
         <div class="iphoneX">
             <div class="header">
                 <h2>おごる(送金)</h2>
-                <button id="back_btn" type="button"　onclick="">
-                    ＜
-                </button>
+                <input type="image" src="/img/back.png" id="back_btn" onclick="history.back()">
             </div>
 
             <div class="user">
@@ -42,7 +41,7 @@
                     <input name="distUser_id" value="4" type="hidden">
                     <textarea name="comment" rows="5" cols="60"></textarea></p></label>
                     {{ csrf_field() }}
-                <input type="submit" id="next_btn" value="次へ">
+                <input type="image" src="/img/next.png" id="next_btn">
             </form>
 
         </div>
