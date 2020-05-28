@@ -1,49 +1,60 @@
-@media screen and (max-width:900px){
-    *{
-        margin: 0px;
-        padding: 0px;
-    }
-    body{
-        background: #F7AB19;
-        font-family: 'ヒラギノ丸ゴ ProN','Hiragino Maru Gothic ProN',sans-serif;
-    }
-    .top-message{
-        width: 100%;
-        text-align: center;
-        background: #ffffff;
-        padding: 15px;
-        top: 0;
-    }
-    .icon{
-        position: relative;
-        display: inline-block;
-        width: 88px;
-        height: 88px;
-        border-radius: 50%;
-        background: #ffffff;
-        padding: 5px;
-        margin: 15px;
-    }
-    .message{
-        position: absolute;
-        display: inline-block;
-        padding: 15px;
-        padding-top: 20px;
-        padding-bottom: 20px;
-        padding-left: 5px;
-        padding-right: 5px;
-        margin-top: 10px;
-        margin-right:35px;
-    }
-    span{
-        font-weight: bold;
-    }
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    display: flex;
+    justify-content: center;
+    background: #F7AB19;
+    font-family: 'ヒラギノ丸ゴ ProN','Hiragino Maru Gothic ProN',sans-serif;
+}
+.iphoneX{
+    position: relative;
+    width: 375px;
+    height: 812px;
+    background: #F7AB19;
+}
+.header{
+    position: absolute;
+    width: 380px;
+    height: 219px;
+    left: 0px;
+    top: 0px;
+    background: #F1F1F1;
+}
+h2{
+    position: absolute;
+    font-size: 33px;
+    text-align: center;
+    left: 15%;
+    top: 30%;
+}
+#hanko{
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    left: 70%;
+    top: 50%;
 
-    .homebtn{
-        text-align: center;
-        font-weight: bold;
-        padding: 10px 30px;
-
-    }
-
+}
+#msg_frame{
+    position: relative;
+    position: absolute;
+    width: 380px;
+    height: 250px;
+    bottom: 40%;
+}
+#home_back{
+    position: absolute;
+    width: 375px;
+    height: 110px;
+    background: #F7AB19;
+    bottom: 130px;
+    border: none;
+}
+.comment{
+    position: absolute;
+    top: 315px;
+    left: 100px;
+    line-height: 30px;
 }
