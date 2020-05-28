@@ -20,7 +20,7 @@
                 <img src="/img/msg_frame.png" id="msg_frame">
                 <div class="comment">
                     <p><span id="username">
-                        おごられ　たろう</span>
+                        {{ $name }}</span>
                     さんに<br>
                     おごりました！<br>
                     喜んでくれるといいね！</p>

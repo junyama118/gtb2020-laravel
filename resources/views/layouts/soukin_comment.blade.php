@@ -20,7 +20,7 @@
                 <div id="icon"></div>
                 <div class="usermsg">
                 <span id="distUser_id">
-                    おごられ たろう
+                    {{$name}}
                 </span>
                 <p id="message">
                     さん
