@@ -146,6 +146,11 @@ class SunabarController extends Controller
         // echo $response->getStatusCode();
     }
 
+    public function return($amount)
+    {
+        return view('layouts/soukin_comment', compact('amount'));
+    }
+
     // test
     public function show()
     {
