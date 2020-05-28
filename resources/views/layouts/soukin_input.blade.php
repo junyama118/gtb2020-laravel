@@ -11,7 +11,7 @@
         <div class="iphoneX">
             <div class="header">
                 <h2>おごる金額を入力してね</h2>
-                <button id="back_btn" type="button"　onclick="location.href='./users'">
+                <button id="back_btn" type="button" onclick="location.href='./users'">
                     ＜
                 </button>
             </div>
@@ -19,7 +19,7 @@
             <div class="user">
                 <div id="icon"></div>
                 <div id="username">
-                    おごられ たろう
+                    {{$name}}
                 </div>
             </div>
 
