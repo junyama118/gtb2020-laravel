@@ -17,7 +17,7 @@
                 <td>{{$user->name}}</td>
                 <td>{{$user->email}}</td>
                 <td>
-                    <form method="post" action="/transfer">
+                    <form method="post" action="/transfer_input">
                         <input type="hidden" name="_token" value="{{csrf_token()}}">
                         <input type="hidden" name="id" value="{{$user->id}}">
                         <input type="submit" value="奢る！" class="btn btn-danger btn-sm btn-destroy">

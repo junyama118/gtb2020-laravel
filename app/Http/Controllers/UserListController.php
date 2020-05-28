@@ -67,5 +67,9 @@ class UserListController extends Controller
 
             return response()->json($transfer, 201);
         }
+    public function postUserID(Request $request)
+    {
+        $id = $request->input('id');
+        return view('layouts/soukin_input', compact('id'));
     }
 }

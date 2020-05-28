@@ -37,9 +37,7 @@ Route::post('/users', 'UserListController@create');
 
 // 送金ページ
 // 金額入力画面
-Route::get('/transfer_input', function(){
-    return view('layouts/soukin_input');
-});
+Route::post('/transfer_input', 'UserListController@postUserID');
 // 
 Route::get('/transfer_comment/{amount}', 'SunabarController@return');
 

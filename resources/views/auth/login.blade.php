@@ -13,41 +13,32 @@
         </div>
         
         <div align="center">
-            <table border="0">
                 <form action="{{ route('login') }}" method="POST">
                     @csrf
+                    <div class="form-group row">
 
-                    <tr>
+                        <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('メールアドレス') }}</label>
+    
 
-                        <div class="form-group row">
-                            <td>
-                                <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('メールアドレス') }}</label>
-                            </td>
 
-                            <td>
-                                <div class="col-md-6">
-                                    <input id="mail-form" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autofocus>
-                                </div>
-                            </td>
-
+                        <div class="col-md-6">
+                            <input id="mail-form" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autofocus>
                         </div>
-                    </tr>
+                        
 
-                    <tr>
-                        <div class="form-group row">
-                            <td>
-                                <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('パスワード ') }}</label>
-                            </td>
+                    </div>
+    
+                    <div class="form-group row">
 
-                            <td>
-                                <div class="col-md-6">
-                                    <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required>
-                                </div>
-                            </td>
+                        <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('パスワード ') }}</label>
+
+                        <div class="col-md-6">
+                            <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required>
                         </div>
-                    </tr>
+                    
+                    </div>
 
-                    <tr>
+                    <div>
                         @error('email')
                             <span class="invalid-feedback" role="alert">
                                 <strong>{{ $message }}</strong>
@@ -59,19 +50,15 @@
                                 <strong>{{ $message }}</strong>
                             </span>
                         @enderror
-                    </tr>
-
-                    <tr>
-                        <td>
-                            <div class="form-group row mb-0">
-                                <div class="col-md-8 offset-md-4">
-                                    <button type="submit" class="btn btn-primary">
-                                        {{ __('Login') }}
-                                    </button>
-                                </div>
-                            </div>
-                        </td> 
-                    </tr>
+                    </div>
+            
+                    <div class="form-group row mb-0">
+                        <div class="col-md-8 offset-md-4">
+                            <button type="submit" class="btn btn-primary">
+                                {{ __('Login') }}
+                            </button>
+                        </div>
+                    </div>
                 </form>
             </table>
         </div>
