@@ -14,7 +14,6 @@ body{
     width: 375px;
     height: 812px;
     background: #F7AB19;
-
 }
 .header{
     position: absolute;
@@ -23,6 +22,7 @@ body{
     height: 58px;
     box-sizing: border-box;
     padding: 10px;
+    background: #F7AB19;
 }
 h2{
     position: absolute;
@@ -38,73 +38,54 @@ h2{
 }
 .user{
     position: relative;
-    width: 353px;
-    height: 69px;
-    background: #F8BC47;
-    border-radius: 14px;
-    top: 90px;
-    left:5px;
-    padding: 5px;
+    width: 375px;
+    height: 150px;
+    box-sizing: border-box;
+    background: #F1F1F1;
+    top: 100px;
 }
 #icon{
     position: absolute;
     display: inline-block;
-    width: 43px;
-    height: 43px;
+    width: 80px;
+    height: 80px;
     border-radius: 50%;
     background: #ffffff;
-    padding: 5px;
-    top: 15px;
-    left: 20px;
+    right: 10px;
+    left: 10px;
+    top: 30px;
 }
-#username{
-    text-align: center;
-    margin-top: 20px;
-    font-size: 20px;
-}
-.number_input{
+.usermsg{
     position: relative;
-    margin-bottom: 10px;
+    left: 150px;
+    top: 40px;
+    font-size: 20px;
+    color: #000000;
+}
+.money{
+    position: absolute;
+    top: 250px;
 }
 #amount{
     position: absolute;
-    font-size: 96px;
-    right: 60px;
-    top: 110px;
+    font-size: 90px;
+    left: 230px;
 }
 #yen{
     position: absolute;
     font-size: 36px;
-    top: 180px;
-    right: 10px;
+    top: 80px;
+    bottom: 30px;
+    left: 300px;
 }
-.input{
-    position: relative;
-    width:375px;
-    top: 300px;
-}
-.row{
-    display: flex;
-    justify-content: space-between;
-    width: 370px;
-}
-.num_btn,#clear{
-    width: 114px;
-    height: 50px;  
-    background: #F8BC47;
-    border-radius: 5px;
-    text-align: center;
-    line-height: 50px;
-    font-size: 25px;
-    cursor: pointer;
-    margin: 8px;
+.comment_area{
+    position: absolute;
+    width: 375px;
+    box-sizing: border-box;
+    top:430px;
 }
 #next_btn{
     position: absolute;
-    width: 359px;
-    height: 69px;
-    background: #F8BC47;
-    top: 720px;
-    border: none;
-
+    left: 160px;
 }
+
