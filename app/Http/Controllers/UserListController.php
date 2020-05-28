@@ -31,8 +31,9 @@ class UserListController extends Controller
             $comment = $temp[0]['comment'];
             $srcUser = User::findOrFail($temp[0]['srcUser_id']);
             $name = $srcUser['name'];
+            $amount = $temp[0]['amount'];
 
-            return view('', compact('name', 'comment')); 
+            return view('layouts/recive', compact('name', 'comment', 'amount')); 
         }
         catch ( \Exception $ex){
             $users = User::all();
