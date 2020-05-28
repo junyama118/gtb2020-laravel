@@ -10,9 +10,9 @@
     </head>
 
     <body>
-        <div class="parentElement">
+        <div class="iphoneX">
             <div class="title">
-                <h1>LOGO:おごってください</h1>
+                <h1>おごってください！</h1>
             </div>
 
 
@@ -35,13 +35,13 @@
                         <label for="addpassword">パスワード:</label>
                     </div>
                     <div>
-                        <input type="password" id="addpassword" required class="questioncolum passwordcolum">
+                        <input type="password" minlength="12" id="addpassword" required class="questioncolum passwordcolum">
                     </div>
                     <div class="questiontitle title_checkpassword">
                         <label for="checkpassword">パスワード（確認）:</label>
                     </div>
                     <div>
-                        <input type="password" id="checkpassword" required class="questioncolum checkpasswordcolum" oninput="checkpass(this)">
+                        <input type="password" minlength="12" id="checkpassword" required class="questioncolum checkpasswordcolum" oninput="checkpass(this)">
                     </div>
 
                     <input type="submit" name="submitvalue" value="新規登録" class="submitbottom">
