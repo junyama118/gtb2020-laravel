@@ -4,7 +4,7 @@
 }
 
 body{
-    background: #F7AB19;
+    background: #FFE81A;
     font-family: 'ヒラギノ丸ゴ ProN','Hiragino Maru Gothic ProN',sans-serif;
 }
 .container{
@@ -13,7 +13,7 @@ body{
     align-items: center;
     width: 100vw;
     height: 100vh;
-    background: #F7AB19;
+    background: #FFE81A;
 }
 .header{
     border: 3px solid #F7AB19;
