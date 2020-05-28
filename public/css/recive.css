@@ -75,12 +75,32 @@ h2{
     top: 120px;
     line-height: 30px;
 }
+#coin_fukidashi{
+    position: absolute;
+    width: 270px;
+    height: 190px;
+    right: 10px;
+    bottom: 190px;
+}
+#comment{
+    position: absolute;
+    width: 200px;
+    height: 180px;
+    bottom: 150px;
+    left: 150px;
+}
+#send_username{
+    position: absolute;
+    padding-top: 15px;
+    left: 15px;
+}
+
 #coinkun{
     position: absolute;
     width: 100px;
     height:100px;
-    bottom: 210px;
-    left:10px;
+    bottom: 180px;
+    left:5px;
     transform: scale(-1,1);
 }
 
