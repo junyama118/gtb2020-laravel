@@ -40,26 +40,23 @@ class SunabarController extends Controller
         $query = Account::query();
         $query->where('user_id', $srcUser_id);
         $temp = $query -> get();
-        $hoge = $temp[0];
-        echo $hoge["account_id"];
+        $srcData = $temp[0];
+        echo $srcData;
+        // echo $hoge["account_id"];
 
         return;
 
-        // DBから読み出し
-        // Auth::user
-
         // userIDのDBをもとに必要なデータを流し込む
 
-
         // 送金元データ
-        $token = 'add your token';
-        $accountId = '301010000864';
+        $token = $srcData['token'];
+        $accountId = $srcData['account_id'];
         
         // 送金先データ
         // 口座番号
-        $accountNumber ='0000857';
+        $accountNumber = ['accountNumber'];
         // 支店番号
-        $beneficiaryBranchCode = '301';
+        $beneficiaryBranchCode = ['accountNumber'];
         // 金融機関番号、あおぞらは0310
         $beneficiaryBankCode = '0310';
 
@@ -87,7 +84,7 @@ class SunabarController extends Controller
         ];
 
         // データの整形
-        $temp = json_encode($postfields, JSON_UNESCAPED_UNICODE);
+        $encode = json_encode($postfields, JSON_UNESCAPED_UNICODE);
         $accessToken = "x-access-token:" . $token;
 
         $curl = curl_init();
@@ -99,7 +96,7 @@ class SunabarController extends Controller
             CURLOPT_TIMEOUT => 30,
             CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
             CURLOPT_CUSTOMREQUEST => "POST",
-            CURLOPT_POSTFIELDS => $temp,
+            CURLOPT_POSTFIELDS => $encode,
             CURLOPT_HTTPHEADER => array(
                 "Accept: application/json;charset=UTF-8",
                 "Content-Type: application/json",
