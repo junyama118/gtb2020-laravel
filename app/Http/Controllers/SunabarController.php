@@ -2,9 +2,14 @@
 
 namespace App\Http\Controllers;
 
+
+use Illuminate\Support\Facades\Auth;
 use App\Http\Requests\TransferRequest;
+
+use App\User;
 use App\Transfer;
 use App\Account;
+
 use Illuminate\Http\Request;
 use \GuzzleHttp\Client;
 
@@ -16,29 +21,41 @@ class SunabarController extends Controller
     {
         $url = 'https://api.sunabar.gmo-aozora.com/personal/v1/transfer/request';
 
-        echo "sunabar";
-        echo $request;
-
         // postされた値を受け取る
         $amount = $request->input('amount');
         $comment = $request->input('comment');
         $distUser_id = $request->input('distUser_id');
-        return;
-        // DBから読み出し
-        // Auth::user
 
-        // userIDのDBをもとに必要なデータを流し込む
+        $srcUser_id = Auth::id();
 
-
-        // 送金元データ
-        $token = 'add your token';
-        $accountId = '301010000864';
+        // 送金履歴の保存
+        Transfer::create([
+            'srcUser_id' => $srcUser_id,
+            'distUser_id' => $distUser_id,
+            'amount'=> $amount,
+            'comment' => $comment,
+        ]);
         
-        // 送金先データ
+        // srcのデータ抽出
+        $srcQuery = Account::query();
+        $srcQuery->where('user_id', $srcUser_id);
+        $srcTemp = $srcQuery -> get();
+        $srcData = $srcTemp[0];
+
+        $token = $srcData['token'];
+        $accountId = $srcData['account_id'];
+
+        // distのデータ抽出
+        $distQuery = Account::query();
+        $distQuery->where('user_id', $distUser_id);
+        $distTemp = $distQuery -> get();
+        $distData = $distTemp[0];
+        // echo $distData;
+        
         // 口座番号
-        $accountNumber ='0000857';
+        $accountNumber = $distData['accountNumber'];
         // 支店番号
-        $beneficiaryBranchCode = '301';
+        $beneficiaryBranchCode = $distData['beneficiaryBranckCode'];
         // 金融機関番号、あおぞらは0310
         $beneficiaryBankCode = '0310';
 
@@ -51,13 +68,13 @@ class SunabarController extends Controller
                 'beneficiaryBranchCode' => $beneficiaryBranchCode,
                 'accountTypeCode' => '1',
                 'accountNumber' => $accountNumber,
-                'beneficiaryName' => 'ｶ)ｱｵｿﾞﾗｻﾝ' 
+                'beneficiaryName' => 'ｶ)ｱｵｿﾞﾗｻﾝ' //直したい
             ]
         ];
             
         $postfields = [
             'accountId' => $accountId,
-            'remitterName' => 'ｱｵｿﾞﾗ ﾃｽﾄ',
+            'remitterName' => 'ｱｵｿﾞﾗ ﾃｽﾄ', //直したい
             'transferDesignatedDate' => date("Y-m-t"),
             'transferDateHolidayCode' => '1',
             'totalCount' => '1',
@@ -66,7 +83,7 @@ class SunabarController extends Controller
         ];
 
         // データの整形
-        $temp = json_encode($postfields, JSON_UNESCAPED_UNICODE);
+        $encode = json_encode($postfields, JSON_UNESCAPED_UNICODE);
         $accessToken = "x-access-token:" . $token;
 
         $curl = curl_init();
@@ -78,7 +95,7 @@ class SunabarController extends Controller
             CURLOPT_TIMEOUT => 30,
             CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
             CURLOPT_CUSTOMREQUEST => "POST",
-            CURLOPT_POSTFIELDS => $temp,
+            CURLOPT_POSTFIELDS => $encode,
             CURLOPT_HTTPHEADER => array(
                 "Accept: application/json;charset=UTF-8",
                 "Content-Type: application/json",
@@ -97,7 +114,8 @@ class SunabarController extends Controller
             // return view('layouts.soukin-finish', );
         } else {
             
-            echo $response;
+            // echo $response;
+            return view('layouts/soukin_finish');
         }
     }    
 
