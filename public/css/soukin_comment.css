@@ -6,23 +6,23 @@ body{
     display: flex;
     justify-content: center;
     color: #ffffff;
-    background: #F7AB19;
+    background: #FFE81A;
     font-family: 'ヒラギノ丸ゴ ProN','Hiragino Maru Gothic ProN',sans-serif;
 }
 .iphoneX{
     position: relative;
     width: 375px;
     height: 812px;
-    background: #F7AB19;
+    background: #FFE81A;
 }
 .header{
     position: absolute;
-    border: 3px solid #F7AB19;
+    border: 3px solid #FFE81A;
     width: 375px;
     height: 58px;
     box-sizing: border-box;
     padding: 10px;
-    background: #F7AB19;
+    background: #FFE81A;
 }
 h2{
     position: absolute;
@@ -41,20 +41,9 @@ h2{
     width: 375px;
     height: 150px;
     box-sizing: border-box;
-    background: #F1F1F1;
     top: 100px;
 }
-#icon{
-    position: absolute;
-    display: inline-block;
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    background: #ffffff;
-    right: 10px;
-    left: 10px;
-    top: 30px;
-}
+
 .usermsg{
     position: relative;
     left: 150px;
