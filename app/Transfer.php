@@ -12,5 +12,6 @@ class Transfer extends Model
         'distUser_id',
         'amount',
         'comment',
+        'ogoriFlag',
     ];
 }
