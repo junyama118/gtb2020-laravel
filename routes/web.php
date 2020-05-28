@@ -39,7 +39,7 @@ Route::post('/users', 'UserListController@create');
 // 金額入力画面
 Route::post('/transfer_input', 'UserListController@postUserID');
 // 
-Route::get('/transfer_comment/{amount}', 'SunabarController@return');
+Route::post('/transfer_comment', 'SunabarController@return');
 
 Route::get('/transfer_check', function(){
     return view('transfer_check');

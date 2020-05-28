@@ -108,6 +108,9 @@ class SunabarController extends Controller
         
         curl_close($curl);
         
+        $user = User::findOrFail($distUser_id);
+        $name = $user['name'];
+
         if ($err) {
             echo "cURL Error #:" . $err;
             // ページ遷移、多分こんな感じ
@@ -115,7 +118,7 @@ class SunabarController extends Controller
         } else {
             
             // echo $response;
-            return view('layouts/soukin_finish');
+            return view('layouts/soukin_finish', compact('name'));
         }
     }    
 
@@ -146,9 +149,15 @@ class SunabarController extends Controller
         // echo $response->getStatusCode();
     }
 
-    public function return($amount)
+    public function return(Request $request)
     {
-        return view('layouts/soukin_comment', compact('amount'));
+        $amount = $request->input('amount');
+        $id = $request->input('id');
+
+        $user = User::findOrFail($id);
+        $name = $user['name'];
+
+        return view('layouts/soukin_comment', compact('name', 'amount'));
     }
 
     // test

@@ -56,7 +56,8 @@
                 </div>
             </div>
             
-            <form action="" method="POST">
+            <form action="/transfer_comment" method="POST">
+                {{ csrf_field() }}
                 <input type="hidden" name="amount" id="total">
                 <input type="hidden" name="id" value="{{$id}}">
                 <input type="image" src="/img/next.png"  id="next_btn" type="button" onclick="">
