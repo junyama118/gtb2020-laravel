@@ -32,9 +32,11 @@ body{
         box-sizing: border-box;
         padding: 10px;
     }
-    .img_header_logo{
+
+    #img_header_logo{
         position: absolute;
         background-size:contain;
+        width: 100px;
         top:-15px;
         height:18%;
         left:1.5%;
