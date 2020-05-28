@@ -16,6 +16,7 @@ class UserListController extends Controller
     public function postUserID(Request $request)
     {
         $id = $request->input('id');
-        return view('layouts/soukin_input', compact('id'));
+        $name = $request->input('name');
+        return view('layouts/soukin_input', compact('id', 'name'));
     }
 }

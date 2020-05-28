@@ -22,6 +22,7 @@
                     <form method="post" action="/transfer_input">
                         <input type="hidden" name="_token" value="{{csrf_token()}}">
                         <input type="hidden" name="id" value="{{$user->id}}">
+                        <input type="hidden" name="name" value="{{$user->name}}">
                         <input type="image" src="/Volumes/GoogleDrive/マイドライブ/@GTB/おごってアプリ/img/ogoru_btn.png" id="ogoru_btn">
                     </form>
                 </td>

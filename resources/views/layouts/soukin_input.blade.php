@@ -19,7 +19,7 @@
             <div class="user">
                 <div id="icon"></div>
                 <div id="username">
-                    おごられ たろう
+                    {{$name}}
                 </div>
             </div>
 
