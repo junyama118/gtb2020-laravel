@@ -64,3 +64,4 @@ Route::get('/test_create', 'RegisterController@create');
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+Route::get('/testusers', 'UserListController@get_userlist');
