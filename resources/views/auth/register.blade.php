@@ -10,12 +10,8 @@
     </head>
 
     <body>
-        <div class="parentElement">
-            <div class="title">
-                <h1>LOGO:おごってください</h1>
-            </div>
-
-
+        <div class="iphoneX">
+            <img src="/img/logo.png" alt="おごってくださいっ！" id="img_header_logo">
             <div class="createaccount-container">
 
                <form method="POST" action="{{ route('register') }}">

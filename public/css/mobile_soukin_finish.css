@@ -5,14 +5,14 @@
 body{
     display: flex;
     justify-content: center;
-    background: #F7AB19;
+    background: #FFE81A;
     font-family: 'ヒラギノ丸ゴ ProN','Hiragino Maru Gothic ProN',sans-serif;
 }
 .iphoneX{
     position: relative;
     width: 375px;
     height: 812px;
-    background: #F7AB19;
+    background: #FFE81A;
 }
 .header{
     position: absolute;
@@ -48,7 +48,7 @@ h2{
     position: absolute;
     width: 375px;
     height: 110px;
-    background: #F7AB19;
+    background: #FFE81A;
     bottom: 130px;
     border: none;
 }
