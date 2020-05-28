@@ -36,10 +36,9 @@ body{
     #img_header_logo{
         position: absolute;
         background-size:contain;
-        width: 100px;
-        top:-15px;
-        height:18%;
-        left:1.5%;
+        top:-0px;
+        height:16%;
+        left:-1%;
     }
 
 
