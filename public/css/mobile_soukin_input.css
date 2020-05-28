@@ -102,9 +102,9 @@ h2{
 #next_btn{
     position: absolute;
     width: 359px;
-    height: 69px;
-    background: #F8BC47;
-    top: 720px;
+    height: 100px;
+    background: #F7AB19;
+    top: 700px;
+    left: 5px;
     border: none;
-
 }

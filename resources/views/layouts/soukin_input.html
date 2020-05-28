@@ -55,12 +55,13 @@
                     </section>
                 </div>
             </div>
-
-            <button id="next_btn" type="button" onclick="">
-                次へ
-            </button>
             
+            <form action="" method="POST">
+                <input type="hidden" name="amount" id="total">
+                <input type="image" src="/Volumes/GoogleDrive/マイドライブ/@GTB/gtb2020-laravel/public/img/next.png" name="amount" id="next_btn" type="button" onclick="">
+            </form>
         </div>
+        
         <script>
             'use strict'
             {
@@ -78,6 +79,7 @@
                         }
                         //数字ボタンに対応した数字を表示される
                         amount.textContent = total;
+                        document.getElementById("total").value = total ;
                     })
                 })
                 
@@ -90,11 +92,14 @@
                 total = 0;
                 amount.textContent = 0;
             }
+
+            const next_btn = document.getElementById("next_btn")
+            next_btn.addEventListener('click', () =>{
+                total = document.amount.submit();
+                console.log(total);
+            })
         }
 
-
-
-    
         </script>
     </body>
 </html>
