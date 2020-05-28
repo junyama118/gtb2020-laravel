@@ -25,10 +25,10 @@ class SunabarController extends Controller
         $amount = $request->input('amount');
         $comment = $request->input('comment');
         $distUser_id = $request->input('distUser_id');
-        echo $distUser_id . "\n";
 
         $srcUser_id = Auth::id();
 
+        // 送金履歴の保存
         Transfer::create([
             'srcUser_id' => $srcUser_id,
             'distUser_id' => $distUser_id,
@@ -36,27 +36,26 @@ class SunabarController extends Controller
             'comment' => $comment,
         ]);
         
-        // データ抽出
-        $query = Account::query();
-        $query->where('user_id', $srcUser_id);
-        $temp = $query -> get();
-        $srcData = $temp[0];
-        echo $srcData;
-        // echo $hoge["account_id"];
+        // srcのデータ抽出
+        $srcQuery = Account::query();
+        $srcQuery->where('user_id', $srcUser_id);
+        $srcTemp = $srcQuery -> get();
+        $srcData = $srcTemp[0];
 
-        return;
-
-        // userIDのDBをもとに必要なデータを流し込む
-
-        // 送金元データ
         $token = $srcData['token'];
         $accountId = $srcData['account_id'];
+
+        // distのデータ抽出
+        $distQuery = Account::query();
+        $distQuery->where('user_id', $distUser_id);
+        $distTemp = $distQuery -> get();
+        $distData = $distTemp[0];
+        // echo $distData;
         
-        // 送金先データ
         // 口座番号
-        $accountNumber = ['accountNumber'];
+        $accountNumber = $distData['accountNumber'];
         // 支店番号
-        $beneficiaryBranchCode = ['accountNumber'];
+        $beneficiaryBranchCode = $distData['beneficiaryBranckCode'];
         // 金融機関番号、あおぞらは0310
         $beneficiaryBankCode = '0310';
 
@@ -115,7 +114,8 @@ class SunabarController extends Controller
             // return view('layouts.soukin-finish', );
         } else {
             
-            echo $response;
+            // echo $response;
+            return view('layouts/soukin_finish');
         }
     }    
 
