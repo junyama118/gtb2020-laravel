@@ -55,11 +55,13 @@
                     </section>
                 </div>
             </div>
-            <!--formをここに作って、jsから数値が飛んでくるようにする　見えない要素で、数字を入れる-->
+            
             <form action="" method="POST">
-            <input type="image" src="/Volumes/GoogleDrive/マイドライブ/@GTB/gtb2020-laravel/public/img/next.png" name="amount" id="next_btn" type="button" onclick="">
+                <input type="hidden" name="amount" id="total">
+                <input type="image" src="/Volumes/GoogleDrive/マイドライブ/@GTB/gtb2020-laravel/public/img/next.png" name="amount" id="next_btn" type="button" onclick="">
             </form>
         </div>
+        
         <script>
             'use strict'
             {
@@ -77,7 +79,7 @@
                         }
                         //数字ボタンに対応した数字を表示される
                         amount.textContent = total;
-                        //次へのフォームに入れるようにここでかく、入力したと同時にformの見えない要素の値もかえる
+                        document.getElementById("total").value = total ;
                     })
                 })
                 
