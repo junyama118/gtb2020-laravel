@@ -115,7 +115,7 @@ class SunabarController extends Controller
         if ($err) {
             echo "cURL Error #:" . $err;
             // ページ遷移、多分こんな感じ
-            // return view('layouts.soukin-finish', );
+            return view('layouts/contact');
         } else {
             
             // echo $response;
@@ -158,7 +158,7 @@ class SunabarController extends Controller
         $user = User::findOrFail($id);
         $name = $user['name'];
 
-        return view('layouts/soukin_comment', compact('name', 'amount'));
+        return view('layouts/soukin_comment', compact('name', 'amount', 'id'));
     }
 
     // test
