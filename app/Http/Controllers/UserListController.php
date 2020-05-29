@@ -70,7 +70,7 @@ class UserListController extends Controller
             'token' => $request -> input('token'),
             'account_id'=> $obj->accounts[0]->accountId,
             'accountNumber' => $request -> input('accountNumber'),
-            'beneficiaryBranckCode'=>$request -> input('BranckCode'),
+            'beneficiaryBranckCode'=>$request -> input('branckCode'),
         ]);
 
         return redirect('/users');
