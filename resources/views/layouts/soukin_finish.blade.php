@@ -27,6 +27,8 @@
                 </div>
             </div>
 
+            <div>
+
                 <button type="button" onclick= "location.href='https://bank.sunabar.gmo-aozora.com/bank/notices/important'">
                     <img src="/img/go_aozora.png" id="home_back"/>
                 </button>

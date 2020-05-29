@@ -37,19 +37,28 @@ class SunabarController extends Controller
             'ogoriFlag' => '1',
         ]);
         
-        // srcのデータ抽出
+        // DBからsrcのデータ抽出
         $srcQuery = Account::query();
         $srcQuery->where('user_id', $srcUser_id);
         $srcTemp = $srcQuery -> get();
+
+        // DBからdistのデータ抽出
+        $distQuery = Account::query();
+        $distQuery->where('user_id', $distUser_id);
+        $distTemp = $distQuery -> get();
+
+        if (isset($srcTemp) || isset($distTemp)) {
+            echo "相手が口座情報登録してないよ：登録させてね";
+            // ページ遷移、多分こんな感じ
+            return view('layouts/contact');
+        }
+
+        // 抽出したデータから使うものをさらに抽出
         $srcData = $srcTemp[0];
 
         $token = $srcData['token'];
         $accountId = $srcData['account_id'];
 
-        // distのデータ抽出
-        $distQuery = Account::query();
-        $distQuery->where('user_id', $distUser_id);
-        $distTemp = $distQuery -> get();
         $distData = $distTemp[0];
         // echo $distData;
         

@@ -8,6 +8,15 @@
     </header>
 
     <body>
+    <div>
+
+        <button type="button" onclick= "location.href='./users'">
+            ユーザーリストに戻る
+            <!-- <img src="/img/go_aozora.png" id="home_back"/> -->
+        </button>
+        
+    </div>
+
         
     </body>
 </html>
