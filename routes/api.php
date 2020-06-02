@@ -16,4 +16,8 @@ Route::middleware('api')->group(function () {
 
     // Edit the botttom from here!
     Route::get('comments', 'CommentController@index');
+    Route::post('comments', 'CommentController@store');
+    
+    Route::post('/transfer_test', 'SunabarController@test');
+
 });

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet"  href="mobile_invite.css">
+        
+        <title>招待します！</title>
+    </head>
+    <body>
+        <div class="iphoneX">
+            <div class="header">
+                <button class="backbotton" type="button" onclick="history.back()">＜</button>
+            
+            
+            </div>
+
+            <div class="title">招待します！</div>
+
+            <div class="main">
+                <p>招待URL</p>
+            </div>
+
+            <div class="copyArea">
+                <input class="copyarea" id="copy" type="text" size="15" value="http://www.ogottekudasai.work/invite" onfocus="this.select();" readonly>
+                <button class="copybutton" onclick="copyToClipboard()">URLをコピー</button>
+            </div>
+
+            <div class="copyicon">
+            </div>
+
+            <script>
+                function copyToClipboard() {
+                    var copyTarget = document.getElementById("copy");
+                    copyTarget.select();
+                    document.execCommand("Copy")
+                        alert("コピーしました！ : " + copyTarget.value);
+                }
+            </script>
+        </div>
+    </body>
+</html>
+<script>

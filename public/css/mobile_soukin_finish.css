@@ -1,0 +1,60 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    display: flex;
+    justify-content: center;
+    background: #FFE81A;
+    font-family: 'ヒラギノ丸ゴ ProN','Hiragino Maru Gothic ProN',sans-serif;
+}
+.iphoneX{
+    position: relative;
+    width: 375px;
+    height: 812px;
+    background: #FFE81A;
+}
+.header{
+    position: absolute;
+    width: 380px;
+    height: 219px;
+    left: 0px;
+    top: 0px;
+    background: #F1F1F1;
+}
+h2{
+    position: absolute;
+    font-size: 33px;
+    text-align: center;
+    left: 15%;
+    top: 30%;
+}
+#hanko{
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    left: 70%;
+    top: 50%;
+
+}
+#msg_frame{
+    position: relative;
+    position: absolute;
+    width: 380px;
+    height: 250px;
+    bottom: 40%;
+}
+#home_back{
+    position: absolute;
+    width: 375px;
+    height: 110px;
+    background: #FFE81A;
+    bottom: 130px;
+    border: none;
+}
+.comment{
+    position: absolute;
+    top: 315px;
+    left: 100px;
+    line-height: 30px;
+}

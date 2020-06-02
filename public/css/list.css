@@ -1,0 +1,45 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    background: #FFE81A;
+    font-family: 'ヒラギノ丸ゴ ProN','Hiragino Maru Gothic ProN',sans-serif;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background: #FFE81A;
+}
+.header{
+    border: 3px solid #F7AB19;
+    width: 375px;
+    height: 58px;
+    box-sizing: border-box;
+    padding: 10px;
+    text-align: center;
+}
+table{
+    border: 10px solid #F8BC47;
+    background: #ffffff;
+    box-sizing: border-box;
+    border-collapse: collapse;
+}
+table td{
+    padding: 3px;
+    border-bottom: 1px solid #F8BC47;
+}
+
+.friend_table{
+    top: 10%;
+    width: 375px;
+
+}
+#ogoru_btn{
+    width: 100px;
+    height: 100px;
+}

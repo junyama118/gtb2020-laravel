@@ -1,0 +1,120 @@
+body{
+    display: block;
+    background: #FFE81A;
+    font-family: 'ヒラギノ丸ゴ ProN','Hiragino Maru Gothic ProN',sans-serif;
+    margin: 0px;
+    padding: 0px;
+    
+}
+    .iphoneX{
+        background-color:#FFE81A;
+        width:375px;
+        height:812px;
+        position:relative;
+        top:0;
+        margin:0 auto;
+
+    }
+    
+    h1{
+        color:#000000;
+        text-align:center;
+        margin-top:0px;
+        background-size:cover;
+        height:161px;
+        vertical-align:middle;
+        max-width: 900px;
+        position: absolute;
+        max-width: 900px;
+        border: 3px solid #FFE81A;
+        width: 375px;
+        height: 58px;
+        box-sizing: border-box;
+        padding: 10px;
+    }
+
+    #img_header_logo{
+        position: absolute;
+        background-size:contain;
+        top:-0px;
+        height:16%;
+        left:-1%;
+    }
+
+
+    .questiontitle {
+        
+        font-size:13px;
+        color:#000000;
+    }
+    .title_username{
+        position:absolute;
+        top:20%;
+        left:10%;
+    }
+    .title_mailadress{
+        position:absolute;
+        top:29%;
+        left:10%;
+    }
+    .title_password{
+        position:absolute;
+        top:38%;
+        left:10%;
+    }
+    .title_checkpassword{
+        position:absolute;
+        top:47%;
+        left:10%;
+    }
+    
+    .questioncolum{
+        position:absolute;
+        width:283.62px;
+        height:30px;
+        font-size:14px;
+        border-radius:20px;
+        text-align:center;
+        margin-bottom:5px;
+        border: 3px solid #FFFFFF;
+    }
+    .usernamecolum{
+        position:absolute;
+        top:23%;
+        left:10%;
+        
+    }
+    .emailcolum{
+        position:absolute;
+        top:32%;
+        left:10%;
+    }
+    .passwordcolum{
+        position:absolute;
+        top:41%;
+        left:10%;
+    }
+    .checkpasswordcolum{
+        position:absolute;
+        top:90%;
+    }
+    
+
+    .submitbottom {
+        position:absolute;
+        top:70%;
+        background-color:#119A81;
+        box-shadow:0px 0px 0px;
+        width:285px;
+        height:60px;
+        text-align:center;
+        margin-top:60px;
+        border-radius:45px;
+        color:#000000;
+        font-size:18px;
+        border: 3px solid #119A81;
+    }
+
+
+
+
